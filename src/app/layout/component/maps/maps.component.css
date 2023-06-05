@@ -1,0 +1,76 @@
+@import url("../../../../assets/css/style.css");
+@import url("../../../../assets/iconfonts/feather/feather.css");
+.tab{
+    margin-top: 62px;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+#agm-map  {
+    height: 250px;
+    width: 100%;
+   }
+@media (min-width: 992px)
+{
+.app-content {
+margin-left: 160px !important;
+}
+}
+
+.btn {
+    background-color: #6c5ffc;
+    border: none;
+    color: white;
+    padding: 0px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+
+
+ agm-map {
+    height: 557px;
+    width: 100%;
+}
+.world-map {
+    height: 556px !important;
+}
+.main-container {
+    /* padding-left:0px; */
+    float: right;
+}
+.active {
+    color: white;
+    background:#223f9a;
+}
+.my-class{
+    display: block;
+}
+.close1 {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+@media (min-width: 576px){
+    .modal-dialog1{
+        max-width: 323px !important;
+        margin: 1.75rem auto;
+    }
+}
+

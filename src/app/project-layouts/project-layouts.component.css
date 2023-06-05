@@ -1,0 +1,73 @@
+/* @import "../../../../assets/css/style.css"; */
+
+
+.container{
+    padding: 10px;
+    
+}
+
+.but{
+    float: right;
+    background-color: #223f9a;
+    border: none;
+    color: white;
+    padding: 5px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.card input{
+    width: 62px;
+    text-align: center;
+    height: 25px;
+}
+
+/* .card-item img{
+    width: 100px;
+    height: 150px;
+} */
+
+.label label{
+    background-color: black;
+    
+    color: #00a652;
+    border: 2px solid  #8e8f91;
+    width: 43px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.label2 label{
+    background-color: transparent;
+    width: 66px auto;
+    
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+
+  .table_wrapper{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+.h3, h3 {
+    font-size: 1rem !important;
+}
+
+
+
+

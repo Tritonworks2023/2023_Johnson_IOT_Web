@@ -1,0 +1,55 @@
+@import url("../../../../assets/css/style.css");
+/* @import url("../../../../assets/css/bootstrap.min.css"); */
+@import url("../../../../assets/iconfonts/feather/feather.css");
+.responsive-navbar .profile-1 .dropdown-item {
+    padding: 0.75rem 1rem !important;
+}
+input[type=text], input[type=password],input[type=email],input[type=number] {
+    font-size: 14px;
+    color: #333;
+    background: #eeeeee;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    transition: border-color 0.2s, box-shadow .2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;width: 100%;    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.sa{
+    position: relative;
+    font-size: 17px;
+    left: -7px;
+}
+.fa {
+    font-family: "FontAwesome" !important;
+}
+.hide {
+    display: none;
+  }
+  .inner-addon { 
+      position: relative; 
+  }
+  .pass {
+    position: absolute;
+    padding: 9px 26px;
+    z-index: 9999;
+    cursor: pointer;
+    top: 32px;
+  }
+  .left-addon .fa  { left:  0px; }
+  .right-addon .fa { right: 0px;
+  }
+  
+  .right-addon input { padding-right: 50px; }
+  .form-lable{
+      color:#000;
+  }
+  .btn{
+      background:#223f9a;
+  }
+  .dropdown-icon  {
+    font-size: 16px;
+    color: #223f9a !important;
+    position: relative;
+}

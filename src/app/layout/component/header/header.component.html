@@ -1,0 +1,265 @@
+<div class="app-header header sticky" style="margin-bottom: -74px;">
+    <div class="container-fluid main-container">
+        <div class="d-flex">
+
+            <!-- sidebar-toggle-->
+            <a class="logo-horizontal " href="index.html">
+                <!-- <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo" alt="logo">
+                <img src="../assets/images/brand/logo-3.png" class="header-brand-img light-logo1" alt="logo"> -->
+            </a>
+            <!-- LOGO -->
+            <div class="main-header-center ms-3 d-none d-lg-block" style="text-align: center;
+           ">
+              
+               <span style=" font-size: 27px;
+               font-weight: bold;
+               position: relative;">IOT Dashboard </span> <span style="font-size: 14px;">{{currentDate |  date:'medium'}}</span>
+            </div>
+            <div class="d-flex order-lg-2 ms-auto header-right-icons">
+                <div class="dropdown d-none">
+                    <a href="javascript:void(0)" class="nav-link icon" data-bs-toggle="dropdown">
+                        <i class="fe fe-search"></i>
+                    </a>
+                    <div class="dropdown-menu header-search dropdown-menu-start">
+                        <div class="input-group w-100 p-2">
+                            <input type="text" class="form-control" placeholder="Search....">
+                            <div class="input-group-text btn btn-primary">
+                                <i class="fe fe-search" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SEARCH -->
+                <button class="navbar-toggler navresponsive-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fe fe-more-vertical"></span>
+                </button>
+                <div class="navbar navbar-collapse responsive-navbar p-0">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                        <div class="d-flex order-lg-2">
+                            <div class="dropdown d-lg-none d-flex">
+                                <a href="javascript:void(0)" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="fe fe-search"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="input-group-text btn btn-primary">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+<!-- 
+                            <div class="dropdown  d-flex notifications">
+                                <a class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="fe fe-bell"></i>
+                                    <span class=" pulse"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <div class="drop-heading border-bottom">
+                                        <div class="d-flex">
+                                            <h6 class="mt-1 mb-0 fs-16 fw-semibold text-dark">Notifications
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="notifications-menu ps">
+                                        <a class="dropdown-item d-flex" href="notify-list.html">
+                                            <div class="me-3 notifyimg  bg-primary brround box-shadow-primary">
+                                                <i class="fe fe-mail"></i>
+                                            </div>
+                                            <div class="mt-1 wd-80p">
+                                                <h5 class="notification-label mb-1">New Application received
+                                                </h5>
+                                                <span class="notification-subtext">3 days ago</span>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item d-flex" href="notify-list.html">
+                                            <div class="me-3 notifyimg  bg-secondary brround box-shadow-secondary">
+                                                <i class="fe fe-check-circle"></i>
+                                            </div>
+                                            <div class="mt-1 wd-80p">
+                                                <h5 class="notification-label mb-1">Project has been approved
+                                                </h5>
+                                                <span class="notification-subtext">2 hours ago
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item d-flex" href="notify-list.html">
+                                            <div class="me-3 notifyimg  bg-success brround box-shadow-success">
+                                                <i class="fe fe-shopping-cart"></i>
+                                            </div>
+                                            <div class="mt-1 wd-80p">
+                                                <h5 class="notification-label mb-1">Your Product Delivered
+                                                </h5>
+                                                <span class="notification-subtext">30 min ago</span>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item d-flex" href="notify-list.html">
+                                            <div class="me-3 notifyimg bg-pink brround box-shadow-pink">
+                                                <i class="fe fe-user-plus"></i>
+                                            </div>
+                                            <div class="mt-1 wd-80p">
+                                                <h5 class="notification-label mb-1">Friend Requests</h5>
+                                                <span class="notification-subtext">1 day ago</span>
+                                            </div>
+                                        </a>
+                                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                        </div>
+                                        <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a href="notify-list.html" class="dropdown-item text-center p-3 text-muted">View all Notification
+                                    </a>
+                                </div>
+                            </div> -->
+                            <!-- SIDE-MENU -->
+                            <div class="dropdown d-flex profile-1">
+                                <a href="javascript:void(0)" (click)="profi($event)" data-bs-toggle="dropdown" class="nav-link icon  iconleading-none d-flex">
+                                    <!-- <img src="../assets/images/avatar.png" alt="profile-user" class="avatar  profile-user brround cover-image"  style="position:relative;top:-8px;"> -->
+                                    <i class="fe fe-user"></i>
+                                </a>
+                                <div *ngIf="profile" (click)="$event.stopPropagation()" class="dropdown-menu dropdown-menu-end dropdown-menu-arrow show">
+                                    <div class="drop-heading">
+                                        <div *ngIf="!userLog" class="text-center">
+                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">Johnson</h5>
+                                            <small class="text-muted">Admin</small>
+                                        </div>
+                                        <div *ngIf="userLog" class="text-center">
+                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">{{username}}</h5>
+                                            <small class="text-muted">User</small>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a class="dropdown-item" routerLink="/layout/manage-user" *ngIf="adminlog"    >
+                                        <i class="dropdown-icon fe fe-user-plus"></i>
+                                        Add New Customer </a>
+
+                                    <a class="dropdown-item" routerLink="/layout/user" *ngIf="adminlog" (click)=unprofile()   >
+                                        <i class="dropdown-icon fe fe-user-plus"></i>
+                                        Add New User </a>
+                                        <a class="dropdown-item" routerLink="/layout/branch" *ngIf="adminlog" (click)=unprofile()   >
+                                            <i class="dropdown-icon fa fa-building-o"></i>
+                                            Add New Branch </a>
+                                        <a class="dropdown-item" *ngIf="!adminlog" (click)="data()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+                                            <i class="dropdown-icon fe fe-lock"></i>
+                                            Change Password </a>
+                                    <!-- <a class="dropdown-item" href="email-inbox.html">
+                                        <i class="dropdown-icon fe fe-mail"></i> Inbox
+                                        <span class="badge bg-danger rounded-pill float-end">5</span>
+                                    </a>
+                                    <a class="dropdown-item" href="lockscreen.html">
+                                        <i class="dropdown-icon fe fe-lock"></i> Lockscreen </a> -->
+                                    <a class="dropdown-item" routerLink="/login">
+                                        <i class="dropdown-icon fe fe-alert-circle"  ></i> Sign out </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="demo-icon nav-link icon" *ngIf="adminlog">
+                        <a routerLink="/layout/user" (click)=unprofile() >
+                    <i class="fe fe-settings fa-spin  text_primary" style="top:-3px !important;"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Change password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span class="sa">X</span></button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div class="row">
+                   
+                        <div class="col-md-12 right-addon" style="position:relative">
+                            <h5 class="form-lable">Old-Password</h5>
+                            <input [type]="showPassword ? 'text' : 'password'" pInputText [(ngModel)]="old_password" placeholder="Enter Old-Password" (focus)="pass()"  (keypress)="onKeypressEvent($event)" (keydown)="onKeypress($event)">
+                            <div *ngIf="eye"> 
+                                <i alt="show" class="fa fa-eye-slash eye-show " style="  position: absolute;
+                                padding: 9px 26px;
+                                z-index: 9999;
+                                cursor: pointer;
+                                top: 32px;"
+                                (click)="showPassword = !showPassword"
+                                [class.hide]="showPassword"></i>
+                                <i alt="hide" class=" fa fa-eye eye-hide"  style="  position: absolute;
+                                padding: 9px 26px;
+                                z-index: 9999;
+                                cursor: pointer;
+                                top: 32px;"
+                                (click)="showPassword = !showPassword"
+                                [class.hide]="!showPassword"></i>
+                              </div>
+                            <span class="text-danger"
+                            *ngIf="olpass">
+                            wrong password
+                        </span>
+                        </div>
+<div class="col-md-12 right-addon" style="position:relative">
+    <h5 class="form-lable">New Password</h5>
+    <input [type]="showPassword2 ? 'text' : 'password'" pInputText [(ngModel)]="new_password"  placeholder="Enter New Password" (keypress)="onKeypressEvent1($event)" (keydown)="onKeypress1($event)" >
+    <div *ngIf="neweye"> 
+        <i alt="show" class="fa fa-eye-slash eye-show " style="  position: absolute;
+        padding: 9px 26px;
+        z-index: 9999;
+        cursor: pointer;
+        top: 32px;"
+        (click)="showPassword2 = !showPassword2"
+        [class.hide]="showPassword2"></i>
+        <i alt="hide" class=" fa fa-eye eye-hide"  style="  position: absolute;
+        padding: 9px 26px;
+        z-index: 9999;
+        cursor: pointer;
+        top: 32px;"
+        (click)="showPassword2 = !showPassword2"
+        [class.hide]="!showPassword2"></i>
+      </div>
+</div>
+<div class="col-md-12 right-addon" style="position:relative">
+    <h5 class="form-lable">Re-Type Password</h5>
+    <input [type]="showPassword3 ? 'text' : 'password'" pInputText  [(ngModel)]="re_password" placeholder="Enter  Re-Type Password" (focus)="pass1()" (keypress)="onKeypressEvent2($event)" (keydown)="onKeypress2($event)" >
+    <div *ngIf="reeye"> 
+        <i alt="show" class="fa fa-eye-slash eye-show " style="  position: absolute;
+        padding: 9px 26px;
+        z-index: 9999;
+        cursor: pointer;
+        top: 32px;"
+        (click)="showPassword3 = !showPassword3"
+        [class.hide]="showPassword3"></i>
+        <i alt="hide" class=" fa fa-eye eye-hide"  style="  position: absolute;
+        padding: 9px 26px;
+        z-index: 9999;
+        cursor: pointer;
+        top: 32px;"
+        (click)="showPassword3 = !showPassword3"
+        [class.hide]="!showPassword3"></i>
+      </div>
+    <span class="text-danger"
+    *ngIf="repass">
+    cannot match password
+</span>
+</div>
+                        </div>
+                  
+              
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" style=" background: #223f9a !important; " class="btn btn-secondary" data-bs-dismiss="modal" #closeBtn>Close</button>
+          <button type="button" class="btn btn-primary" (click)="update()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

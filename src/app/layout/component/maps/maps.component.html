@@ -1,0 +1,200 @@
+<div class="jumps-prevent" style="padding-top: 74px;"></div> <!-- /app-Header -->
+<!--APP-SIDEBAR-->
+
+
+
+<div class="jumps-prevent" style="padding-top: 74px;"></div>
+<div class="">
+    <div class="side-app">
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid col-lg-10">
+
+            <div class="row" style="padding-top:20px !important">
+                    <!-- <div _ngcontent-scv-c16="" class="col-xl-2 col-md-2">
+                            <div _ngcontent-scv-c16="" class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                                <div _ngcontent-scv-c16="" class="row">
+                                    <div _ngcontent-scv-c16="" class="col-lg-6 col-md-6 col-sm-12 col-xl-12">
+                                        <div _ngcontent-scv-c16="" class="card overflow-hidden">
+                                            <div _ngcontent-scv-c16="" class="card-body">
+                                                <div _ngcontent-scv-c16="" class="justify-content-center d-flex ">
+                                                    <div _ngcontent-scv-c16="" class="mt-2">
+                                                        <h6 _ngcontent-scv-c16="">TOTAL</h6>
+                                                        <h2 _ngcontent-scv-c16="" class="mb-0 number-font">{{total_count}}</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div _ngcontent-scv-c16="" class="col-lg-12 col-md-12 col-sm-12 col-xl-12"
+                                        *ngFor="let item of count" >
+                                        <div _ngcontent-scv-c16="" class="card overflow-hidden">
+                                            <div _ngcontent-scv-c16="" class="card-body" [ngClass]="{'my-class': item?.STAT == 'UP','my-class1': item?.STAT == 'DWN2','my-class2': item?.STAT == 'ENT'}">
+                                                <div _ngcontent-scv-c16="" class="justify-content-center d-flex">
+                                                    <div _ngcontent-scv-c16="" class="mt-2 text-center">
+                                                        <h6 *ngIf="item?.STAT == 'UP'" _ngcontent-scv-c16="">RUNNING</h6>
+                                                        <h6 *ngIf="item?.STAT == 'ENT'" _ngcontent-scv-c16="">ENTRAPMENT</h6>
+                                                        <h6 *ngIf="item?.STAT == 'DWN2'" _ngcontent-scv-c16="">BREAK DOWN</h6>
+                                                        <h6 *ngIf="item?.STAT == 'BAT'" _ngcontent-scv-c16="">LOW BATTERY</h6>
+                                                        <h6 *ngIf="item?.STAT == 'NC'" _ngcontent-scv-c16="">NO COMMUNICATION</h6>
+                                                        <h6 *ngIf="item?.STAT == 'DWN1'" _ngcontent-scv-c16="">ERROR</h6>
+                                                        <h2 _ngcontent-scv-c16="" class="mb-0 number-font text-center">{{item?.STATCNT}}
+                                                        </h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                            </div>
+                        </div> -->
+                        
+                                  <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2"  [ngClass]="{'my-class': userLog == 'true'}"  *ngFor="let item of branch_List" (click)="change(item)">
+                                   
+                                    <div class="card overflow-hidden">
+                                        <div class="card-body p-1 "[ngClass]="{'active': firstChild == item}">
+                                            <div class="justify-content-center d-flex">
+                                                <div class="mt-2 text-center">
+                                                    <h6>{{item}}</h6>
+        
+                                                    <h2 class="mb-0 number-font text-center">
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                            </div>
+                            
+                    
+                    
+            
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="overflow-hidden">
+                        <div class="card-body p-0">
+                            <div class="">
+                                <div id="world-map-markers1" class="worldh world-map h-250">
+
+                                    <agm-map [latitude]="lat"
+                                    [longitude]="lng"
+                                    [zoom]="zoom"
+                                    [disableDefaultUI]="false"
+                                   
+                                   >
+                                        <ng-container *ngFor="let m of markers; let i = index">
+
+                                          <agm-marker *ngIf="m.check_status > 0"
+                                          (markerClick)="clickedMarker(m.label, i,infowindow)"
+                                          [latitude]="m.lat"
+                                          [longitude]="m.lng"
+                                          [iconUrl]="icon1"
+                                          >
+                                          <agm-info-window #infowindow>
+                                            <p *ngFor="let ma of m.content;">
+                                              <strong>{{ma.label}} </strong>:<span>{{ma.key}}</span>
+                                              </p>
+                                            </agm-info-window></agm-marker>
+                                            <agm-marker *ngIf="m.check_status == 0 && m.check_break > 0"
+                                                    (markerClick)="clickedMarker(m.label, i,infowindow)"
+                                                    [latitude]="m.lat"
+                                                    [longitude]="m.lng"
+                                                    [iconUrl]="icon"
+                                                    >
+                                                    <agm-info-window #infowindow>
+                                                      <p *ngFor="let ma of m.content;">
+                                                        <strong>{{ma.label}} </strong>:<span>{{ma.key}}</span>
+                                                        </p>
+                                                      </agm-info-window></agm-marker>
+
+                                        <agm-marker *ngIf="m.check_status == 0 && m.check_break == 0"
+                                        (markerClick)="clickedMarker(m.label, i,infowindow)"
+                                        [iconUrl]="icon"
+                                        [latitude]="m.lat"
+                                        [longitude]="m.lng"
+                                        [iconUrl]="icon2"
+                                      
+                                        >
+                                        <agm-info-window #infowindow>
+                                          <p *ngFor="let ma of m.content;">
+                                            <strong>{{ma.label}}</strong>:<span>{{ma.key}}</span>
+                                            </p>
+                                          </agm-info-window></agm-marker>
+
+
+
+                                        </ng-container>
+
+
+                                      </agm-map>
+
+                                </div>
+                            </div>
+                            <!-- <div class="table-responsive mt-2 text-center">
+                                <table class="table text-nowrap border-dashed mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-start">Br.Cd</th>
+                                            <th class="">Branch Name</th>
+                                            <th class="">UP</th>
+                                            <th class="">Entrap</th>
+                                            <th class="">DWN2</th>
+                                            <th class="">Batt.</th>
+                                            <th class="">NC</th>
+                                            <th class="">DWN1</th>
+                                            <th class="">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody *ngFor="let item of state ">
+                                        <tr>
+                                            <td class="p-4">{{item?.BBRCD}}</td>
+                                            <td class="text-start p-4"><span
+                                                    class="sales-icon text-primary mx-2 brround bg-primary-transparent p-2">
+                                                </span><span class="mobile">{{item.BBRNAME}}</span> </td>
+                                            <td class="p-4">{{item.BRUP}}</td>
+                                            <td class="p-4">{{item.BRENTRAP}}</td>
+                                            <td class="p-4">{{item.BRDWN2}}</td>
+                                            <td class="p-4">{{item.BRBATTERY}}</td>
+                                            <td class="p-4">{{item.BRNC}}</td>
+                                            <td class="p-4">{{item.BRDWN1}}</td>
+                                            <td class="p-4">{{item.BRTOT}}</td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                                <!--end /table
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- <div class="" style="text-align: center;">
+                            <button (click)="pervious()"class="btn">Previous</button>
+                            <button (click)="next()"class="btn">Next</button>
+                        </div> -->
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</div>
+<div *ngIf="userpopup" class="modal show" tabindex="-1" role="dialog" style="display:block">
+    <div class="modal-dialog1 modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">No Records Found</h5>
+          <button (click)="close()"type="button" class="close1">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- <div class="modal-body">
+          <p>No Data</p>
+        </div> -->
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <div *ngIf="userpopup" class="modal-backdrop fade show "></div>

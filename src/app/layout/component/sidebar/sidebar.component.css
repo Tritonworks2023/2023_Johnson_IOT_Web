@@ -1,0 +1,30 @@
+@import url("../../../../assets/css/style.css");
+@import url("../../../../assets/iconfonts/feather/feather.css");
+ /* .app-sidebar {
+    width: 270px;
+} */
+.side-menu {
+    margin-top: 19px !important;
+}
+.my-class{
+    background: #00db0a;
+    color:white
+}
+.my-class1{
+    background: #0072bc;
+}
+.my-class2{
+    background: #ff0000;
+    color:white;
+}
+.main-container {
+    padding-left:92px;
+}
+h2{
+    font-size: 1rem !important;
+}
+.side-header {
+
+    padding: 3px 6px !important;
+  
+}

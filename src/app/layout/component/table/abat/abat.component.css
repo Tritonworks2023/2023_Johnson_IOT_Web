@@ -1,0 +1,53 @@
+@import url("../../../../../assets/css/style.css");
+@import url("../../../../../assets/iconfonts/feather/feather.css");
+.tab{
+    margin-top: 45px;
+}
+@media (min-width: 992px)
+{
+.app-content {
+margin-left: 160px !important;
+}
+}
+
+.btn {
+    background-color: #6c5ffc;
+    border: none;
+    color: white;
+    padding: 0px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+  .main-container {
+    padding-left:92px;
+}
+thead th{
+    text-align: center!important;
+    font-weight: bold !important;
+    
+}
+.but{
+    float: right;
+    background-color: #223f9a; 
+    border: none;
+    color: white;
+    padding: 5px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.form-select{
+    color:#000;
+}
+th{
+    color:#000 !important;
+}
+tr{
+    color:#000 !important;
+}

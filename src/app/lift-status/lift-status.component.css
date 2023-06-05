@@ -1,0 +1,60 @@
+
+
+.label-blue label{
+    
+    width: 64px;
+    height: 294px;
+    
+    text-align: center;
+    margin-left: 10px;
+    border: 2px solid #3b75a6;
+    color: white;
+}
+
+.lift-img img{
+    width: 42px;
+    height: 52px;
+    margin-top: 228px; 
+}
+
+.side-btn{
+    margin-left: -35px;
+    
+    margin-top: 98px;
+}
+
+.side-btn button{
+    font-size: 13px;
+    width: 90px;
+    color: #3b75a6;
+    background: transparent;
+    border: 1px solid #3b75a6;
+}
+
+.no-lists li{
+    list-style: none;
+    
+}
+
+.no-lists label{
+    color: white;
+    border: 1px solid green;
+    text-align:center;
+    width: 20px;
+    margin-left: 2px;
+    
+}
+
+.no-lists ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -33px;
+}
+
+.no-lists img{
+    width: 10px;
+}
+
+.no-lists img .down{
+    top: -10px;
+}

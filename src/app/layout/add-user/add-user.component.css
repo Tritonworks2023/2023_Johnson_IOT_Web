@@ -1,0 +1,164 @@
+
+@import url("../../../assets/css/style.css");
+@import url("../../../assets/iconfonts/feather/feather.css");
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 20px;
+}
+input[type=text], input[type=password],input[type=email],input[type=number] {
+    font-size: 14px;
+    color: #333;
+    background: #eeeeee;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    transition: border-color 0.2s, box-shadow .2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;width: 100%;    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.form-control1{
+    font-size: 14px;
+    color: #333;
+    background: #eeeeee;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    transition: border-color 0.2s, box-shadow .2s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;width: 100%;    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.tab{
+    margin-top: 45px;
+}
+@media (min-width: 992px)
+{
+.app-content {
+margin-left: 160px !important;
+}
+}
+
+.btn {
+    background-color: #6c5ffc;
+    border: none;
+    color: white;
+    padding: 0px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+.main-container {
+    padding-left:92px;
+}
+thead th{
+    text-align: center!important;
+    font-weight: bold !important;
+    
+}
+.but{
+    float: right;
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 5px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.fe
+{
+    
+    font-weight: bolder;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+        padding: 0 5px;
+    font-size: 16px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.wel .dropdown-toggle::after {
+   display: none;
+}
+.but{
+    float: right;
+    background-color:#223f9a; 
+    border: none;
+    color: white;
+    padding: 5px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn{
+    background-color:#223f9a !important; 
+}
+.aa{
+    bottom: 17px;
+    position: relative;
+}
+::ng-deep .ngx-pagination .current {
+    padding: 0.1875rem 0.625rem;
+    background: #223f9a !important;
+    color: #fefefe;
+    cursor: default;
+}
+.main-content-title{
+    color:#000;
+    font-weight: bold;
+}
+th{
+    color:#000 !important;
+}
+tr{
+    color:#000 !important;
+}
+.is-invalid~.invalid-feedback {
+    display: block !important;
+}
+.invalid-feedback {
+    
+    margin-top: -0.75rem !important;
+  
+}
+.emp{
+    text-transform: uppercase;
+}
+.emp::placeholder{
+    text-transform: capitalize;
+}
+.invalid-feedback1{
+ 
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 87.5%;
+    color: #e23e3d; 
+}
+.faicon .fa
+{
+    font: normal normal normal 14px/1 FontAwesome;
+}
+#select-category {
+    font-size: 100%;
+    /* padding: 10px;
+    padding-right: 180px;
+    margin-left: 30px; */
+    background: #eeeeee;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='34' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    /* margin-right: 2rem; */
+}

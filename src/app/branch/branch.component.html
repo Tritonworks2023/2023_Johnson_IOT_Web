@@ -1,0 +1,278 @@
+<div class="jumps-prevent" style="padding-top: 74px;">
+</div>
+<!-- /app-Header -->
+<!--APP-SIDEBAR-->
+
+
+
+<div class="jumps-prevent" style="padding-top: 74px;"></div>
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+            <div class="page-header">
+                <div>
+                    <h2 *ngIf="addmode" class="main-content-title tx-24 mb-1">Add New Branch </h2>
+                    <h2 *ngIf="editmode" class="main-content-title tx-24 mb-1">Edit New Branch </h2>
+                    <!-- <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a routerLink="dashboard">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"> Details</li>
+                            </ol> -->
+                </div>
+                <div>
+                    <button class="but" (click)="map()">Map</button>
+                </div>
+
+            </div>
+
+        
+
+
+
+            <div class="row row-sm aa">
+                <!-- <div class="col-12 col-sm-12" style="    padding-bottom: 6px;">
+                    <button class="but" (click)="map()">Map</button>
+                </div> -->
+                <div class="col-lg-12">
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <div class="card-item">
+
+                                <div class="row">
+                                    <form [formGroup]="branchForm" style="display: contents;">
+                                        <div class="col-md-3">
+                                            <h5 class="form-lable">Branch Code:</h5>
+                                            <input type="text" class="emp" pInputText formControlName="branch_code" placeholder="Enter Branch Code" (keypress)="keyPressAlphanumeric($event)" 
+                                             [ngClass]="{ 'is-invalid': submitted && f.branch_code.errors }">
+                                             <span *ngIf="submitted && f.branch_code.errors" class="invalid-feedback">
+                                                <span *ngIf="f.branch_code.errors.required">Branch Code is required</span>
+                                             </span>
+                                            <!-- <span class="text-danger"
+                                            *ngIf=" (userForm.controls.name.touched) && userForm.controls.name.errors?.required ||submitted ">
+                                            Name  is required
+                                        </span> -->
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h5 class="form-lable">Branch Name:</h5>
+                                            <input type="text" pInputText formControlName="branch_name" placeholder="Enter Branch Name" 
+                                            [ngClass]="{ 'is-invalid': submitted && f.branch_name.errors }">
+                                            <span *ngIf="submitted && f.branch_name.errors" class="invalid-feedback">
+                                                <span *ngIf="f.branch_name.errors.required">Branch Name is required</span>
+                                             </span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h5 class="form-lable">location latitude:</h5>
+                                            <input type="text" pInputText formControlName="branch_lat" placeholder="Enter latitude"
+                                            [ngClass]="{ 'is-invalid': submitted && f.branch_lat.errors }">
+                                            <span *ngIf="submitted && f.branch_lat.errors" class="invalid-feedback">
+                                                <span *ngIf="f.branch_lat.errors.required">latitude is required</span>
+                                             </span>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <h5 class="form-lable">location longitude :</h5>
+                                            <input type="text" pInputText formControlName="branch_long" placeholder="Enter longitude"
+                                            [ngClass]="{ 'is-invalid': submitted && f.branch_long.errors }">
+                                             <span *ngIf="submitted && f.branch_long.errors" class="invalid-feedback">
+                                                <span *ngIf="f.branch_long.errors.required">longitude is required</span>
+                                             </span>
+                                        </div>
+
+                                        
+                                  
+                                      
+                                    </form>
+                                    <div class="col-md-3">
+                                        <button *ngIf="addmode" type="button" class="btn btn-primary mt-4" (click)="addUser()">
+                                            <!-- <i class="fas fa-plus-circle"></i>  -->
+                                            Add</button>
+                                        <button *ngIf="editmode" type="button" class="btn btn-primary mt-4" (click)="Edit_user()"> Update</button>
+                                        <button *ngIf="editmode" type="button" class="btn btn-danger mt-4" (click)="cancel()">
+                                            Cancel</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row row-sm">
+
+                <div class="col-lg-12">
+                    <!--  <div class="card custom-card"> -->
+                    <!-- <div class="card-body"> -->
+                    <!-- <div class="card-item"> -->
+                    <!-- <div class="col-12 col-sm-12"> -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title mb-0">BRANCH LIST</h3>
+                        </div>
+                        <div class="card-body pt-4">
+                            <div class="grid-margin">
+                                <div class="">
+                                    <div class="panel panel-primary">
+                                        <div class="tab-menu-heading border-0 p-0">
+                                            <div class="tabs-menu1">
+                                                <!-- Tabs -->
+                                                <ul class="nav panel-tabs product-sale">
+                                                    <!--<li><a href="#tab5" class="active"
+                                                                                        data-bs-toggle="tab">Hrs.</a></li>
+                                                                               <li><a href="#tab6" data-bs-toggle="tab"
+                                                                                        class="text-dark">Shipped</a></li>
+                                                                                <li><a href="#tab7" data-bs-toggle="tab"
+                                                                                        class="text-dark">Pending</a></li>
+                                                                                <li><a href="#tab8" data-bs-toggle="tab"
+                                                                                        class="text-dark">Cancelled</a></li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class=" tabs-menu-body border-0 pt-0">
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="tab5">
+                                                    <div class="table-responsive">
+                                                        <div id="data-table_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <div class="dataTables_length" id="data-table_length">
+                                                                        <!-- <label>Show
+                                                                            <select #myselect name="data-table_length" aria-controls="data-table" class="form-select form-select-sm select2 " tabindex="-1"
+                                                                                aria-hidden="true" (change)="selected(myselect.value)">
+                                                                                <option value="5">5
+                                                                                </option>
+                                                                                <option value="10">10
+                                                                                </option>
+                                                                                <option value="25">25
+                                                                                </option>
+                                                                                <option value="50">50
+                                                                                </option>
+                                                                                <option value="100">100
+                                                                                </option>
+                                                                            </select>
+                                                                            <!-- <span
+                                                                                                            class="select2 select2-container select2-container--default"
+                                                                                                            dir="ltr" style="width: 61px;"><span
+                                                                                                                class="selection"><span
+                                                                                                                    class="select2-selection select2-selection--single"
+                                                                                                                    role="combobox"
+                                                                                                                    aria-haspopup="true"
+                                                                                                                    aria-expanded="false"
+                                                                                                                    tabindex="0"
+                                                                                                                    aria-labelledby="select2-data-table_length-m4-container"><span
+                                                                                                                        class="select2-selection__rendered"
+                                                                                                                        id="select2-data-table_length-m4-container"
+                                                                                                                        title="10">10</span><span
+                                                                                                                        class="select2-selection__arrow"
+                                                                                                                        role="presentation"><b
+                                                                                                                            role="presentation"></b></span></span></span><span
+                                                                                                                class="dropdown-wrapper"
+                                                                                                                aria-hidden="true"></span></span> 
+                                                                            entries</label> -->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-6">
+                                                                    <div id="data-table_filter" class="dataTables_filter">
+                                                                        <label>
+                                                                            <input type="search" class="form-control form-control"
+                                                                                placeholder="Search..." aria-controls="data-table"
+                                                                                [(ngModel)]="term" (input)="tt.filterGlobal($event.target.value, 'contains')">
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                     
+                                                                    <p-table   #tt [value]="branchList" styleClass="ui-table-customers"  [paginator]="true" [rows]="5"
+                                                                    [rowHover]="true" [rowsPerPageOptions]="[5,10,25,50]" [showCurrentPageReport]="true"
+                                                                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [globalFilterFields]="['branch_code','branch_name']">
+                                                                  
+                                                                  
+                                                                    <ng-template pTemplate="header">
+                                                                        <tr class="thhead">
+                                                                            <th class="th-1">
+                                                                                Branch Name
+                                                                            </th>
+                                                                            <th>
+                                                                                Branch Code
+                                                                            </th>
+                                                                            <th>
+                                                                                    latitude
+                                                                                
+                                                                            </th>
+                                                                            <th>longitude</th>
+                                                                          
+                                                                            <th style="width: 163px;text-align:center">
+                                                                                Action
+                                                                            </th>
+                                                                        </tr>
+                                                                    </ng-template>
+                                                                    <ng-template pTemplate="body" let-item  let-i="rowIndex">
+                                                                    <!-- <ng-container *ngFor="let item of user_type_list ; let i = index;"> -->
+                                                                      <tr class="tdrow">
+                                                                           
+                                                                  
+                                                                            <td>{{item.branch_name}}</td>
+                                                                            <td>
+                                                                              {{item.branch_code}}
+                                                                            </td>
+                                                                            <td>
+                                                                              {{item.branch_lat}}
+                                                                            </td>
+                                                                            <td>{{item.branch_long}}</td>
+                                                                            
+                                                                            <td class="act text-center">
+                                                                              <i style="color: #223f9a;" class="fe fe-edit" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" (click)="edit(item)" pTooltip="Edit"></i>
+                                                                              <i style="color: #fd2c3a;" class="fe fe-trash" aria-hidden="true"  data-bs-toggle="modal" data-bs-target="#staticBackdrop1" (click)="deleteUser(item._id)" pTooltip="Delete"></i>
+                                                                                <!-- <i style="color: #4CAF50;" class="fa fa-info-circle" aria-hidden="true" pTooltip="View"></i> -->
+                                                                            </td>
+                                                                        </tr>
+                                                                    <!-- </ng-container> -->
+                                                                    </ng-template>
+                                                                  </p-table>
+                                                                  
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- </div>
+                                </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 *ngIf="editUser" class="modal-title" id="staticBackdropLabel">Are you sure want to Edit?</h5>
+          <h5 *ngIf="delUser" class="modal-title" id="staticBackdropLabel">Are you sure want to Delete?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span class="sa">X</span></button>
+        </div>
+      
+        <div class="modal-footer">
+            <button type="button" *ngIf="editUser" class="btn btn-primary" (click)="view()" >Yes</button>
+            <button type="button" *ngIf="delUser" class="btn btn-primary" (click)="deluserdata()" >Yes</button>
+          <button type="button" style=" background: #223f9a !important; " class="btn btn-secondary" data-bs-dismiss="modal" #closeBtn>No</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>

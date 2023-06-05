@@ -1,0 +1,130 @@
+@import url("../../../../assets/css/style.css");
+@import url("../../../../assets/iconfonts/feather/feather.css");
+@import url("../../../../assets/css/_form-wizard.scss");
+.jvectormap-zoomout {
+    display: block !important;
+}
+.jvectormap-zoomin {
+    display: block !important;
+}
+    .h-250 {
+        height: auto !important;
+    }
+    .tipClick>button{
+        font-size: 20px;
+        line-height: 21px
+      }
+      .tipClick{
+       
+        display:block;
+        position:relative
+      }
+      .tipClick > button:focus + .tooltipT{
+          display:block!important; /*TOOLTIP VISIBLE ON CLICKING THE ICON*/
+      }
+      .tooltipT{
+          display:none;/*=====INITIAL HIDDEN STATE=====*/
+          position: absolute;
+          background: #fff;
+          /* color-stop(0%,rgba(51,51,51,0.85)), color-stop(100%,rgba(0,0,0,0.85))); webkit */
+          -moz-box-shadow: 0 0 6px 1px #666666;
+          -webkit-box-shadow: 0 0 6px 1px #666666;
+          box-shadow: 0 0 6px 1px #666666;
+          border:solid #FFFFFF;
+          color: #636363;
+          padding:10px 25px 10px 10px;
+          font-family:Arial;
+          font-size: 15px;
+          text-align: center;
+          text-align:left;
+          bottom:26px;
+          left: -120px;
+        /* right:-20px; */
+          z-index: 10;
+          min-width:150px;
+        max-width:150px;
+        
+      }
+      .tooltipT p{
+           margin:10px;
+           font-size: 12px;
+        }
+        /*=====CLOSE BUTTON=====*/
+      .tooltipT span{
+          position: absolute;
+          top:10px;
+          right: 10px;
+          font-size: 12px;
+          line-height: 1;
+      }
+      .tooltipT span a{
+          text-decoration: none;
+          color: #00529B;
+      }
+      .tooltipT span:focus .tooltipT{
+          display: none;/*CLOSE TOOLTIP ON CLICK*/
+      }
+      /*======ARROW=====*/
+      .tooltipT>.arrow, .tooltipT>.arrow:after {
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          border-color: transparent;
+          border-style: solid
+      }
+      .tipClick>.tooltipT>.arrow {
+          border-width: 11px;
+          bottom: -14px;
+          right: 0px;
+          margin-left: -11px;
+          border-top-color: #999;
+          border-top-color: rgba(0, 0, 0, .25);
+          border-bottom-width: 0;
+      }
+      .tipClick>.tooltipT>.arrow:after {
+          content: "";
+          border-width: 10px;
+          bottom: 1px;
+          margin-left: -10px;
+          content: " ";
+          border-top-color: #fff;
+          border-bottom-width: 0
+      }
+    
+      .tool{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+      @media (min-width: 992px)
+      {
+.app-content {
+    margin-left: 160px !important;
+}
+      }
+
+      
+
+       .btn {
+        background-color: #6c5ffc;
+        border: none;
+        color: white;
+        padding: 8px 21px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      .my_class{
+          background-colo: #6c5ffc;
+      }
+      .main-container{
+        margin-left: 92px;
+        padding-right: 4.5rem !important;
+      }
+     .page-header{
+         min-height: 0px !important;
+     }

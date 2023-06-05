@@ -1,0 +1,229 @@
+<div class="sticky is-expanded" style="margin-bottom: -74px;">
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <div class="app-sidebar ps ps--active-y open">
+        <div class="side-header">
+            <a class="header-brand1" href="index.html">
+                <img src="../assets/images/johnlogo1.png" class="header-brand-img desktop-logo" alt="logo">
+                <img src="../assets/images/johnlogo1.png" class="header-brand-img toggle-logo" alt="logo">
+                <img src="../assets/images/johnlogo1.png" class="header-brand-img light-logo" alt="logo">
+                <img style="width: 243px;height: 114px;" src="../assets/images/johnlogo1.png" class="header-brand-img light-logo1"
+                    alt="logo">
+            </a>
+            <!-- LOGO -->
+        </div>
+        <div class="main-sidemenu is-expanded">
+            <div class="slide-left disabled active is-expanded" id="slide-left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                </svg>
+            </div>
+            <div class="row side-menu open" style="margin-right: 0px;     width: 282px;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12" style="padding-top:9px !important;">
+
+                            <div class="card overflow-hidden">
+                                <div class="card-body p-1">
+                                    <div class="justify-content-center d-flex ">
+                                        <div class="mt-2 text-center">
+                                            <h6>TOTAL</h6>
+                                            <h2 class="mb-0 number-font">{{total_count}}</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- <div  class="col-lg-12 col-md-12 col-sm-12 col-xl-12"
+                                *ngFor="let item of count" >
+                                <div  class="card overflow-hidden">
+                                    <div  class="card-body p-1" [ngClass]="{'my-class': item?.STAT == 'UP','my-class1': item?.STAT == 'DWN2','my-class2': item?.STAT == 'ENT'}">
+                                        <div  class="justify-content-center d-flex">
+                                            <div  class="mt-2 text-center">
+                                                <h6  *ngIf="item?.STAT == 'UP'" >RUNNING</h6>
+                                                <a routerLink="/entrapment">  <h6  style="color:black" *ngIf="item?.STAT == 'ENT'" >ENTRAPMENT</h6></a>
+                                                <a routerLink="/down2">  <h6  style="color:black" *ngIf="item?.STAT == 'DWN2'" >BREAK DOWN</h6></a>
+                                                <h6 *ngIf="item?.STAT == 'BAT'" >LOW BATTERY</h6>
+                                                <h6 *ngIf="item?.STAT == 'NC'" >NO COMMUNICATION</h6>
+                                                <a routerLink="/apat">    <h6  style="color:black"  *ngIf="item?.STAT == 'ABAT'" >ABAT</h6></a>
+                                                <a routerLink="/ebat">  <h6 style="color:black"  *ngIf="item?.STAT == 'EBAT'" >EBAT</h6></a>
+                                                <h6 *ngIf="item?.STAT == 'DWN1'" >ERROR</h6>
+                                                <h2  class="mb-0 number-font text-center">{{item?.STATCNT}}
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                            <div class="card overflow-hidden">
+                                <div class="card-body p-1 my-class">
+                                    <div class="justify-content-center d-flex">
+                                        <div class="mt-2 text-center">
+                                            <h6>RUNNING</h6>
+
+                                            <h2 class="mb-0 number-font text-center">{{running}}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                            <a routerLink="/layout/entrapment" style="color:black">
+                                <div class="card overflow-hidden">
+                                    <div class="card-body p-1 my-class2">
+                                        <div class="justify-content-center d-flex">
+                                            <div class="mt-2 text-center">
+                                                <h6>ENTRAPMENT</h6>
+
+                                                <h2 class="mb-0 number-font text-center">{{entrap}}
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                            <a routerLink="/layout/down2">
+                                <div class="card overflow-hidden">
+                                    <div class="card-body p-1 my-class1" style=" color:white">
+                                        <div class="justify-content-center d-flex">
+                                            <div class="mt-2 text-center">
+                                                <h6>BREAK DOWN</h6>
+
+                                                <h2 class="mb-0 number-font text-center">{{breadown}}
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                            <a routerLink="/layout/abat" style="color:black">
+                                <div class="card overflow-hidden">
+                                    <div class="card-body p-1 ">
+                                        <div class="justify-content-center d-flex">
+                                            <div class="mt-2 text-center">
+                                                <h6>ABAT</h6>
+
+                                                <h2 class="mb-0 number-font text-center">{{abat}}
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                            <a routerLink="/layout/ebat" style="color:black">
+                                <div class="card overflow-hidden">
+                                    <div class="card-body p-1 ">
+                                        <div class="justify-content-center d-flex">
+                                            <div class="mt-2 text-center">
+                                                <h6>EBAT</h6>
+
+                                                <h2 class="mb-0 number-font text-center">{{ebat}}
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+                            <div class="card overflow-hidden">
+                                <div class="card-body p-1 ">
+                                    <div class="justify-content-center d-flex">
+                                        <div class="mt-2 text-center">
+                                            <h6>NO COMMUNICATION</h6>
+
+                                            <h2 class="mb-0 number-font text-center">{{noc}}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card overflow-hidden">
+                                <div class="card-body p-1 ">
+                                    <div class="justify-content-center d-flex">
+                                        <div class="mt-2 text-center">
+                                            <h6>ERROR</h6>
+
+                                            <h2 class="mb-0 number-font text-center">{{error}}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+
+
+        
+
+
+                            <div class="card overflow-hidden">
+                                <a routerLink="/layout/project-layouts">
+                                    <div class="card overflow-hidden">
+                                        <div class="card-body p-1 my-class1" style=" color:white">
+                                            <div class="justify-content-center d-flex">
+                                                <div class="mt-2 text-center">
+                                                    <h6>Live Status</h6>
+    
+                                                    <h2 class="mb-0 number-font text-center">
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <!-- <div class="card overflow-hidden">
+                                <div class="card-body p-1 " routerLink="/layout/manage-user">
+                                    <div class="justify-content-center d-flex">
+                                        <div class="mt-2 text-center">
+                                            <h6>Manage User</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+                            
+
+                          
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- <ul class="side-menu open" style="margin-right: 0px;">
+                <li class="sub-category">
+                    <h3>Main</h3>
+                </li>
+                <li class="slide is-expanded" [routerLink]="['/dashboard']" routerLinkActive="active"> <a class="side-menu__item active" data-bs-toggle="slide" routerLink="/"><i class="side-menu__icon fe fe-home"></i><span class="side-menu__label">Dashboard</span></a> </li>
+                <li class="slide is-expanded" [routerLink]="['/maps']" routerLinkActive="active"> <a class="side-menu__item active" data-bs-toggle="slide" routerLink="/"><i class="side-menu__icon fe fe-map-pin"></i><span class="side-menu__label">Map</span></a> </li>
+            </ul> -->
+            <!-- <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z">
+                    </path>
+                </svg></div> -->
+            <!-- </div> 
+        <!-- <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+        </div> -->
+            <div class="ps__rail-y" style="top: 0px; height: 529px; right: 0px;">
+                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 318px;"></div>
+            </div>
+        </div>
+        <!--/APP-SIDEBAR-->
+    </div>

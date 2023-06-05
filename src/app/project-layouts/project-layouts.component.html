@@ -1,0 +1,268 @@
+<div class="jumps-prevent" style="padding-top: 74px;">
+</div>
+<!-- /app-Header -->
+<!--APP-SIDEBAR-->
+
+
+
+<div class="jumps-prevent"></div>
+<div class="main-content app-content mt-0">
+    <div class="side-app">
+        <!-- CONTAINER -->
+        <div class="main-container container-fluid">
+            <div class="page-header">
+                <div>
+                    <h2 class="main-content-title tx-24 mb-1">Add New Branch </h2>
+                    <h2 class="main-content-title tx-24 mb-1">Edit New Branch </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <div class="">
+
+                <div class="col-lg-12" style="width:100% ;padding-left:  20%;">
+
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <div class="card-item">
+
+                                <div class="col-12 col-sm-12" style="text-align:end ;">
+                                    <button class="but" (click)="map()">Map</button>
+                                </div>
+                              
+
+                                <div class="row row-sm">
+                                    <div class="col-lg-12">
+                                        <div class=" custom-card">
+                                            <div class="">
+                                                <div class="">
+                                                    <div class="">
+                                                        <div class="row">                                                  
+                                                                <div class="col-md-4">
+                                                  
+                                                                     <div class="">
+                                                                        <input type="text" placeholder="Enter Job No" [(ngModel)]="enterliftId" style="width: 60%;">
+                                                                        <button (click)="ngOnInit()">Search</button>
+                                                                        <button (click)="pauseTimer()">Stop</button>
+                                                                     </div>
+
+                                                                    <div class="card"
+                                                                        style="padding: 10px; width: 279px; height: 522px; background-image: linear-gradient( #f4eeee, #716a6a ); border-width: thick; border-color: #203e9d;">
+                                                                        <div class="row">
+                                                                            <div class="col">
+                                                                                <div class="mat-card"
+                                                                                    style="background-color: #203e9d; color: white; width:auto; border-radius: 4px; text-align: center;height: 54px;">
+                                                                                    <span class="pt-2"
+                                                                                        style="display: flex;justify-content: center;column-gap: 13px;">
+                                                                                        <h5>{{current_value_details.liftId}}</h5>
+                                                                                        <div class="label pb-2">
+                                                                                            <label class="mb-4" style="width: 100px!important;margin: -4px;"><b>{{enterliftId}}</b></label> 
+                                                                                                                                                   
+                                                                                        </div>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- <div class="col pt-2">
+                                                                                <div class="mat-card"
+                                                                                    style="color:white; background-color: #203e9d; width: auto;  border-radius: 4px; text-align: center;">
+                                                                                    <h3>JOHNSON {{timeLeft}}</h3>
+                                                                                </div>
+                                                                            </div> -->
+                                                                        </div>
+
+                                                                        <div class="lift-doors mt-2 mb-2">
+                                                                            <div class="mat-card p-1"  style="border-radius: 5px;border: 2px solid #01a552;background: transparent;box-shadow: none;">
+                                                                                <!-- <div class="mat-card p-1" *ngIf="Breakdown_color == 'Green' || Entrapment_color == 'Red'" style="border-radius: 5px;border: 2px solid #a50101;background: transparent;box-shadow: none;"> -->
+                                                                                <div class="row">
+                                                                                    <div class="col">
+                                                                                    <img style="height:256px ;border-radius: 2px;" src="../../assets/images/open.jpg"alt=""  *ngIf="current_value_details.floor_status == 'Open'">
+                                                                                    <img style="height:256px ;border-radius: 2px;" src="../../assets/images/parjpg.jpg"alt="" *ngIf="current_value_details.floor_status == 'Par'">
+                                                                                    <img style="height:256px ;border-radius: 2px;" src="../../assets/images/close.jpg"alt="" *ngIf="current_value_details.floor_status == 'Close'">                                                                                       
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="mat-card p-1"
+                                                                                            style=" border: 2px solid #828486;text-align: center; border-radius: 7px;background-color: black;color: #01a552; width: 31px;height: 39px; margin-top: 61px;">
+                                                                                            <h3>{{current_value_details.floor_no}}</h3>
+                                                                                        </div>
+                                                                                        <div class="mat-card p-1" style="border: 2px solid #828486;border-radius: 7px;background-color: black;width: 31px;margin-top: 11px;" *ngIf="current_value_details.door_dir_txt == 'Up'">
+                                                                                            <img style="height:20px;" src="../../../../assets/images/up-arrow.png"alt=""><br>    
+                                                                                        </div>
+
+                                                                                        <div class="mat-card p-1" style="border: 2px solid #828486;border-radius: 7px;background-color: black;width: 31px;margin-top: 11px;" *ngIf="current_value_details.door_dir_txt == 'Down'">  
+                                                                                            <img style="height:20px;" src="../../../../assets/images/down-arrow.png" alt="">
+                                                                                        </div>
+
+
+                                                                                        <div class="mat-card p-1" style="border: 2px solid #828486;border-radius: 7px;background-color: black;width: 31px;margin-top: 11px;" *ngIf="current_value_details.door_dir_txt == 'StandBy'">
+                                                                                            <img style="height:20px;" src="../../../../assets/images/up-arrow.png"alt=""><br>    
+                                                                                            <img style="height:20px;" src="../../../../assets/images/down-arrow.png" alt="">
+                                                                                        </div>
+                                                                                          
+                                                                                        
+
+                                                                                        
+                                                                                    <!-- </div> -->
+                                                                                </div>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <mat-card class="mx-auto"
+                                                                            style="background:linear-gradient(0deg, rgba(179,179,179,1) 0%, rgba(227,227,227,1) 100%) ; width: 251px; height: 110px; border-radius: 7px; border: 2px solid #7e7e7e;">
+                                                                            <div class="mode-status ml-5">
+                                                                                <h5 *ngIf="current_value_mode_event.SAUTOMODE5 == 1">ATTENDENT MODE</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SLOCREMOTE5 == 1"> LOCREMOTE5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SPARKMODE5 == 1"> PARKMODE5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SFIREMAN5 == 1"> FIREMAN5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SMAINTMODE5 == 1"> MAINTMODE5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SARDMODE5 == 1"> ARDMODE5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SCARALARM5 == 1"> CARALARM5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SPOWERSUP5 == 1"> POWERSUP5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SOVERLOAD5 == 1"> OVERLOAD5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SFULLLOAD5 == 1"> FULLLOAD5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SFAULTEVENT5 == 1"> FAULTEVENT5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SFAULTEVENT5 == 1"> FAULTEVENT5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SNEXTLAND5 == 1"> NEXTLAND5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SSAFELAND5 == 1"> SAFELAND5</h5>
+                                                                                <h5 *ngIf="current_value_mode_event.SEXTINPUT5 == 1"> EXTINPUT5</h5>                                                                                
+                                                                            </div>
+                                                                            <div class="">
+
+                                                                            <div *ngIf="Breakdown_color == 'Green'"> <img src="../../../../assets/images/green.png"
+                                                                                alt=""  style="width:5%"> No Breakdown </div> 
+                                                                                <div *ngIf="Breakdown_color == 'Red'">  <img src="../../../../assets/images/red.png"
+                                                                                alt=""  style="width:5%"> Alert New Breakdown </div>
+                                                                                <div *ngIf="Entrapment_color == 'Green'"> <img src="../../../../assets/images/green.png"
+                                                                                alt=""  style="width:5%"> No Entrapment </div> 
+                                                                                <div *ngIf="Entrapment_color == 'Red'"> <img src="../../../../assets/images/red.png"
+                                                                                alt=""  style="width:5%"> Alert New Entrapment </div>
+                                                                            </div>
+                                                                            <!-- <div class="alaram-icon"
+                                                                                style="margin-top: -10px; margin-left: 190px;">
+                                                                                <img src="../../../../assets/images/alarm.png"
+                                                                                    alt="">
+                                                                            </div> -->
+                                                                        </mat-card>
+                                                                    </div>
+                                                                </div>
+
+                                                               
+                                                                <div class="col-md-8">
+
+
+                                                                    
+                                                                    <h3>Floor Status</h3>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12" style="height: 200px; overflow: auto; white-space: nowrap;">
+                                                                            <table style="width:100%">
+                                                                                <tr>
+
+                                                                                  <th>HEX</th>
+                                                                                  <th>BIN</th>
+                                                                                  <th>FLR DES</th>
+                                                                                  <th>FLOOR</th>
+                                                                                  <th>VVF</th>
+                                                                                  <th>DOOR ZN</th>
+                                                                                  <th>DOOR OP / CL</th>
+                                                                                  <th>DOOR OP LIM</th>
+                                                                                  <th>DOOR CI LIM</th>
+                                                                                  <th>DIREC</th>
+                                                                                  <th>RUN</th>
+                                                                                 
+                                 
+                                                                                </tr>
+                                                                                <ng-container *ngFor="let item of latest_value">
+                                                                             <tr>
+                                                                                  <td>{{item.SFDSTATUS}}</td>
+                                                                                  <td>4200</td>
+                                                                                  <td>{{item.SFDESSTATVAL}}</td>
+                                                                                  <td>{{item.SFLRSTAT2}}</td>
+                                                                                  <td>{{item.SVVVFTRIP2}}</td>
+                                                                                  <td>{{item.SDOORZONE2}}</td>
+                                                                                  <td>{{item.SDOOROPCL2}}</td>
+                                                                                  <td>{{item.SDOOROPLIM2}}</td>
+                                                                                  <td>{{item.SDOORCLLIM2}}</td>
+                                                                                  <td>{{item.SDIRECTION2}}</td>
+                                                                                  <td>{{item.SRUNSTAT2}}</td>
+                                                                                </tr>
+                                                                                </ng-container>
+                                                                              </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <h3>Event Status - {{latest_value_mode_event.length}}</h3>
+                                                                    <div class="row">
+                                                                        <div class="col-md-12" style="height: 200px; overflow: auto; white-space: nowrap;">
+                                                                            <table style="width:100%">
+                                                                                <tr>
+                                                                                  <th>HEX</th>
+                                                                                  <th>BIN</th>
+                                                                                  <th>Auto Mode</th>
+                                                                                  <th>Local Remote</th>
+                                                                                  <th>Power Fail</th>
+                                                                                  <th>Park Mode</th>
+                                                                                  <th>Fire Man</th>
+                                                                                  <th>Maint Mode</th>
+                                                                                  <th>ARD Mode</th>
+                                                                                  <th>Car Alrm</th>
+                                                                                  <th>Power Supp</th>
+                                                                                  <th>Over Load</th>
+                                                                                  <th>Full Load</th>
+                                                                                  <th>Fault Eve</th>
+                                                                                  <th>Next Land</th>
+                                                                                  <th>Safe Land</th>
+                                                                                  <th>Ext Int</th>
+                                        
+                                                                                </tr>
+                                                                                <ng-container *ngFor="let item of latest_value_mode_event">
+                                                                                <tr>
+                                                                                  <td>{{item.SMODEEVENTS}}</td>
+                                                                                  <td>4500</td>
+                                                                                  <td>{{item.SAUTOMODE5}}</td>
+                                                                                  <td>{{item.SLOCREMOTE5}}</td>
+                                                                                  <td>{{item.SLOCREMOTE5}}</td>
+                                                                                  <td>{{item.SPARKMODE5}}</td>
+                                                                                  <td>{{item.SFIREMAN5}}</td>
+                                                                                  <td>{{item.SMAINTMODE5}}</td>
+                                                                                  <td>{{item.SARDMODE5}}</td>
+                                                                                  <td>{{item.SCARALARM5}}</td>
+                                                                                  <td>{{item.SPOWERSUP5}}</td>
+                                                                                  <td>{{item.SOVERLOAD5}}</td>
+                                                                                  <td>{{item.SFULLLOAD5}}</td>
+                                                                                  <td>{{item.SFAULTEVENT5}}</td>
+                                                                                  <td>{{item.SNEXTLAND5}}</td>
+                                                                                  <td>{{item.SSAFELAND5}}</td>
+                                                                                  <td>{{item.SEXTINPUT5}}</td>
+
+                                                                                </tr>
+                                                                                </ng-container>
+                                                                              </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                      
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
